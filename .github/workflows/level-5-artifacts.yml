@@ -49,7 +49,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: coverage-report
-                  path: tests/coverage-report
+                  # path: tests/coverage-report
 
             - name: show root dir content
               run: ls
