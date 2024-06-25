@@ -34,6 +34,12 @@ jobs:
             - name: generate HTML output for coverage
               run: deno coverage tests/coverage --html
 
+            - name: Upload Test Coverage Artifact
+              uses: actions/upload-artifact@v4.3.3
+              with:
+                  name: coverage-report
+                  path: tests
+
     deploy:
         needs: test
         runs-on: ubuntu-latest
