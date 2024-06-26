@@ -52,7 +52,7 @@ jobs:
                   # path: tests/coverage-report
 
             - name: show root dir content
-              run: ls
+              run: ls -a
 
             - name: deploy to VPS
               run: echo "deployed ..."
