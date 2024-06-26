@@ -18,9 +18,18 @@ function forOfLoop() {
     }
 }
 
+function forInLoop() {
+    let counter = 0;
+
+    for (const _key in millionDollarArray) {
+        counter++;
+    }
+}
+
 const results = benchmark([
     { name: 'simple-for-oop', fn: simpleForLoop },
     { name: 'for-of-loop', fn: forOfLoop },
+    { name: 'for-in-loop', fn: forInLoop },
 ]);
 
 printResults(results);
